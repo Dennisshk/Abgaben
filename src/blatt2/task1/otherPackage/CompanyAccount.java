@@ -19,6 +19,8 @@ public class CompanyAccount extends Account {
         //System.out.println(a.internalNote);
         System.out.println(a.getInternalNote());
 
+        super.printAccountInfo(a);
+
 
         //Unterschied zwischen protected vs. private+Getter
         //Protected hat keine Bedingungen:
@@ -26,6 +28,8 @@ public class CompanyAccount extends Account {
         this.pin = -2;
         //bei private Bedingungen durch getter
         double j = this.getBalance();
-        //es muss auch keinen setter geben
+        //es muss auch keinen setter geben oder dieser ist eingeschränkt
+        setBalance(-1);
+        setBalance(300);
     }
 }

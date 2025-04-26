@@ -16,5 +16,8 @@ public class Main {
         if(m1 instanceof Email){
             ((Email)m1).send();
         }
+        if(m2 instanceof Email){
+            ((Email)m2).send();
+        }
     }
 }

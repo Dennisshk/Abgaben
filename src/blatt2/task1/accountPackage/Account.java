@@ -17,19 +17,24 @@ public class Account {
         return pin;
     }
     public boolean changePin(int oldPin, int newPin){
-        if(this.pin==oldPin){
+        if(this.pin==oldPin && newPin > 0){
             this.pin=newPin;
             return true;
         }else return false;
     }
+
     public double getBalance() {
         return balance;
     }
+    public void setBalance(double balance) {
+        if(balance>=0) this.balance = balance;
+    }
+
     public String getInternalNote() {
         return internalNote;
     }
-    public void setInternalNote(String internalNote) {
-        this.internalNote = internalNote;
+    public void setInternalNote(String internalNote, int pin) {
+        if(pin==this.pin) this.internalNote = internalNote;
     }
 
     public void printAccountInfo(Account a){
