@@ -31,5 +31,6 @@ public class CompanyAccount extends Account {
         //es muss auch keinen setter geben oder dieser ist eingeschränkt
         setBalance(-1);
         setBalance(300);
+        System.out.println(i+j+company);
     }
 }
