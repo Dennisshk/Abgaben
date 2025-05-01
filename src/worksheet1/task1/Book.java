@@ -1,4 +1,4 @@
-package blatt1.aufgabe1;
+package worksheet1.task1;
 
 public class Book extends Publication{
     private String author;

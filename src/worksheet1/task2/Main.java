@@ -1,4 +1,4 @@
-package blatt1.aufgabe3;
+package worksheet1.task2;
 
 public class Main {
     public static void main(String[] args){
