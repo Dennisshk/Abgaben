@@ -10,10 +10,10 @@ public class Inbox {
     }
 
     public void open(int index){
-        if(mails.size()>index) System.out.println(mails.get(index).getMessage());
+        if(mails.size()>index&&index>=0) System.out.println(mails.get(index).getMessage());
     }
     public void setRead(int index){
-        if(mails.size()>index) mails.get(index).setRead();
+        if(mails.size()>index&&index>=0) mails.get(index).setRead();
     }
 
 
