@@ -21,16 +21,12 @@ public class Lamp implements Switchable, Dimmable {
 
     @Override
     public void setBrightness(int level) {
-        if(level<=MAX_BRIGHTNESS && level>=0)brightness=level;
+        if(on&&level<=MAX_BRIGHTNESS && level>=0)brightness=level;
     }
 
     @Override
     public int getBrightness() {
         return brightness;
-    }
-
-    public void dimToHalf() {
-         brightness=MAX_BRIGHTNESS/2;
     }
 }
 
