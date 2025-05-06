@@ -1,6 +1,6 @@
-package blatt2.task1.otherPackage;
+package worksheet2.task1.otherPackage;
 
-import blatt2.task1.accountPackage.Account;
+import worksheet2.task1.accountPackage.Account;
 
 public class CompanyAccount extends Account {
     private String company;

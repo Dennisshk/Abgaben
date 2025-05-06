@@ -1,4 +1,4 @@
-package blatt2.task1.accountPackage;
+package worksheet2.task1.accountPackage;
 
 public class AccountManager {
     public void printAccountInfos(Account a){
