@@ -21,8 +21,12 @@ public class AnagramChecker {
      */
     public static int[] countLetters(String s) {
         int[] counts = new int[26];
+        for (int i = 0; i < counts.length; i++) {
+            counts[i] = 0;
+        }
         for (int i = 0; i < s.length(); i++) {
-            switch (s.charAt(i)) {
+            if(s.charAt(i)-'a'>=-1 && s.charAt(i)-'a'<counts.length) counts[s.charAt(i)-'a']++;
+           /*  switch (s.charAt(i)) {
                 case 'a':
                     counts[0]++;
                     break;
@@ -101,7 +105,7 @@ public class AnagramChecker {
                 case 'z':
                     counts[25]++;
                     break;
-            }
+            }*/
         }
         return counts;
     }

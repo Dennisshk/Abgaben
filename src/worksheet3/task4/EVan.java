@@ -1,12 +1,9 @@
 package worksheet3.task4;
 
 public class EVan extends Vehicle implements Electrified {
-    // TODO: add attributes , constants and implement required methods
     public EVan(String id, double maxLoad, double batteryCapacity) {
         super(id, maxLoad);
-// TODO: initialise attributes
     }
-// TODO: implement Vehicle + Electrified methods
 
     @Override
     public double fuelNeeded(double distance) {
