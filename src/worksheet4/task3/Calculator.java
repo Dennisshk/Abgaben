@@ -39,6 +39,8 @@ public class Calculator {
         /*
          * Beim Berechnen einer Wurzel wäre Variante 1 sinnvoller, da -1 bei falscher
          * Eingabe zurückgegeben werden kann, was dann auf einen Fehler verweist.
+         * Oder bei Methoden welche Strings zurückgeben, da dort auch direkt
+         * die Fehlermeldung gegeben werden kann.
          */
     }
 }
