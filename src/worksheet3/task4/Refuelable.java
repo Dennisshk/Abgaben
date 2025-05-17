@@ -9,7 +9,8 @@ public interface Refuelable {
      * Works for any Refuelable that also extends Vehicle.
      */
     default boolean canReach(double distance) {
-        if (this instanceof Vehicle v) {
+        if (this instanceof Vehicle) {
+            Vehicle v = (Vehicle)this;
             return v.getRange() >= distance;
         }
         return false;
