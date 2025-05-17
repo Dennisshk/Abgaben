@@ -22,10 +22,7 @@ public class AnagramChecker {
     public static int[] countLetters(String s) {
         int[] counts = new int[26];
         for (char c : s.toCharArray ()) {
-            if(c-'a'>=-1 && c-'a'<counts.length)counts[Character.toLowerCase(c) - 'a ']++;
-        }
-        for (int i = 0; i < s.length(); i++) {
-            counts.length) counts[s.charAt(i)-'a']++;
+            if(c-'a'>=-1 && c-'a'<counts.length)counts[Character.toLowerCase(c) - 'a']++;
         }
         return counts;
     }
