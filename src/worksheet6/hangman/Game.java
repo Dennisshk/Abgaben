@@ -5,7 +5,6 @@ import java.awt .*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util. ArrayList ;
-import java.util.Locale;
 
 
 public class Game extends JFrame {
@@ -13,13 +12,14 @@ public class Game extends JFrame {
     // GUI components
     protected JLabel wordLabel , attemptsLabel , timeLabel ;
     protected JTextField inputField ;
+    protected JButton startButton;
     // The word the player has to guess (fixed for now)
     protected String currentWord = "example";
     // Stores the letters guessed by the player
     protected ArrayList <Character > guessedLetters = new ArrayList < >();
     // Number of tries left
     protected int attemptsLeft = 6;
-    // Time left (not yet functional – stays at 60)
+    // Time left
     protected int timeLeft = 60;
 
 
@@ -31,7 +31,7 @@ public class Game extends JFrame {
         setLayout (new GridLayout (6, 1));
 
         // Button to start a new game
-        JButton startButton = new JButton (" Start Game ");
+        startButton = new JButton (" Start Game ");
         add( startButton );
 
         // Label showing the guessed word with _ for unknown letters
@@ -86,8 +86,10 @@ public class Game extends JFrame {
         attemptsLeft = 6;
         timeLeft = 60;
         updateDisplay ();
+        inputField.setText("");
         inputField . setEnabled (true );
         inputField . requestFocus ();
+        startButton.setText("Hangman");
     }
 
     // Updates the word , attempts , and time on the screen
@@ -100,7 +102,7 @@ public class Game extends JFrame {
                 display . append ("_ ");
             }
         }
-        wordLabel . setText (" Word: " + display . toString ());
+        wordLabel . setText (" Word: " + display);
         attemptsLabel . setText (" Attempts left: " + attemptsLeft );
         timeLabel . setText (" Time left: " + timeLeft );
     }
@@ -108,6 +110,7 @@ public class Game extends JFrame {
     public void processInput () {
         String input = inputField.getText();
         inputField.setText("");
+        if(input.isEmpty()) return;
         if(input.length()!=1){
             System.out.println("Please enter exactly one letter.");
         }else{
@@ -155,10 +158,15 @@ public class Game extends JFrame {
 
     protected void endGame ( boolean won) {
         inputField.setEnabled(false);
+        inputField.setText("");
         if(won){
+            inputField.setText("Das Wort \""+currentWord+"\" wurde erraten!");
             System.out.println("Das Wort \""+currentWord+"\" wurde erraten!");
         }else{
-            System.out.println("Keine Versuche mehr übrig! Das Wort war: \""+currentWord+ "\".");
+            inputField.setText((timeLeft==0?"Zeit abgelaufen!":"Keine Versuche mehr übrig!")+ " Das Wort war: \""+currentWord+ "\".");
+            System.out.println((timeLeft==0?"Zeit abgelaufen!":"Keine Versuche mehr übrig!")+ " Das Wort war: \""+currentWord+ "\".");
         }
+        startButton.setText("Restart");
+        startButton.setEnabled(true);
     }
 }
