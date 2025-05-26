@@ -7,7 +7,7 @@ import java.awt.event.KeyListener;
 import java.util. ArrayList ;
 
 
-public class Game extends JFrame {
+public class  Game extends JFrame {
 
     // GUI components
     protected JLabel wordLabel , attemptsLabel , timeLabel ;
@@ -50,6 +50,8 @@ public class Game extends JFrame {
         inputField = new JTextField ();
         inputField . setHorizontalAlignment ( JTextField .CENTER );
         inputField . setEnabled (false ); // initially inactive
+
+        //Auch mit addActionListener möglich (Bei InputField automatisch Enter)
         inputField.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -126,7 +128,7 @@ public class Game extends JFrame {
 
     protected void handleGuess (char guess) {
         if(guessedLetters.contains(guess)){
-            System.out.println("Der Buchstabe wurde bereits gewählt!");
+            System.out.println("Letter was already guessed.");
         }else{
             guessedLetters.add(guess);
 

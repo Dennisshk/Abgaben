@@ -1,18 +1,22 @@
 package worksheet6.hangman2;
-
+//2 Interfaces implementieren verletzt SOLID
 public class HangmanGame extends GameGUI implements GameLogic,TimerLogic{
 
     /*
     • Which SOLID principles do you recognize in your solution?
-    S: GUI und Logik wurden in unterschiedliche Klassen zerlegt, sodass diese unabhängig voneinander verändert werden können
-    O: Das Projekt kann erweitert werden, da neue Klassen von GUI oder HangmanGame erben können
-    L: Da diese Klasse von GameGUI erbt, hat sie auch alle Eigenschaften von dieser
-    I: Mit Interfaces wurde eine große Klasse in verschiedene Bereiche unterteilt
-    D: Es gibt nur wenige Abhängigkeiten
+    S: GUI und Logik wurden in unterschiedliche Klassen zerlegt, sodass diese unabhängig voneinander verändert werden können.
+       Diese Klasse kümmert sich trotzdem um 2 interfaces.
+    O: Das Projekt kann erweitert werden, da neue Klassen von GUI oder HangmanGame erben können.
+       Beim Aufteilen von Interfaces müsste nur eine Klasse bei Modifikation geändert werden.
+    L: Da diese Klasse von GameGUI erbt, hat sie auch alle Eigenschaften von dieser.
+       Klasse selbst muss bei Modifikation geändert werden.
+    I: Mit Interfaces wurde eine große Klasse in verschiedene Bereiche unterteilt.
+    D: Es gibt viele Abhängigkeiten, z.B. Timer/TimerRunnable.
 
     • How does using interfaces improve the flexibility of your design?
     Klassen können einfacher ersetzt werden, da die Interfaces dafür sorgen, dass die Methoden-Namen
-    einheitlich sind. Es muss nicht viel in anderen Klassen geändert werden.
+    einheitlich sind. Es muss nicht viel in anderen Klassen geändert werden. Jeder kann nur eigenes
+    Interfaces bearbeiten ohne abhängig von anderen Klassen zu sein.
 
 
     • What benefits does this modular design using interfaces offer in larger, more complex projects?
