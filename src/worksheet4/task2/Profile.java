@@ -13,7 +13,7 @@ public class Profile {
         if(shippingInfo!=null){
             this.shippingInfo = shippingInfo;
         } else {
-            MissingShippingInfoException e = new MissingShippingInfoException();
+            MissingShippingInfoException e = new MissingShippingInfoException("Invalid Shipping Info");
             throw e;
         }
     }

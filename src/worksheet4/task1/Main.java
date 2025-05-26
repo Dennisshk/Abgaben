@@ -10,6 +10,7 @@ public class Main {
         Profile p = customer.getProfile();
         ShippingInfo s = p.getShippingInfo();
         System.out.println(" Shipping to: " +s.getCity());
-        //Der Code hat wenig dependency injection, da nur Customer von profile abhängt und dieses wiederum von shippingInfo. 
+        //Der Code hat wenig dependency injection, da nur Customer von profile abhängt und dieses wiederum von shippingInfo.
+        //Konstruktor dependecy injection: Objekte werden über Konstruktor übergeben, keine eigenen Objekte in Klassen angelegt
     }
 }
