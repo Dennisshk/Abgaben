@@ -1,4 +1,4 @@
-package worksheet6.hangman;
+package worksheet6.task1;
 
 public class Timer extends Game {
     protected Thread timerThread ;

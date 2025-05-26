@@ -1,7 +1,7 @@
 package worksheet4.task3;
 
 public class Calculator {
-    public static double divide1(double a, double b) {
+    public static double divide1(int a, int b) {
         try {
             return a / b;
         } catch (ArithmeticException e) {
@@ -9,7 +9,7 @@ public class Calculator {
         }
     }
 
-    public static double divide2(double a, double b) throws ArithmeticException {
+    public static double divide2(int a, int b) throws ArithmeticException {
         return a / b;
     }
 
@@ -25,9 +25,7 @@ public class Calculator {
         } catch (ArithmeticException e) {
             System.out.println(e);
         }
-        /* 3/0 wirft keine Exception, sondern es wird infinity ausgegeben???
-         * Wie ist das möglich?
-         */
+
         /*
          * Variante 2 ist sinnvoller, da aus der Methode entweder eine Zahl oder die
          * Exception gegeben wird. Dies lässt sich in der aufzurufenden Methode

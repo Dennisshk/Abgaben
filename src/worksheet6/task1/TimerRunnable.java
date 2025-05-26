@@ -1,4 +1,4 @@
-package worksheet6.hangman;
+package worksheet6.task1;
 
 import javax.swing. SwingUtilities ;
 
