@@ -77,10 +77,13 @@ public class HangmanGame extends GameGUI implements GameLogic,TimerLogic{
     @Override
     protected void startGame(){
         super.startGame();
+        startTimer();
+    }
+
+    protected void startTimer(){
         timerThread = new Thread(new TimerRunnable(this));
         timerThread.start();
     }
-
 
     public void decreaseTime(){
         if(timeLeft>0) timeLeft--;

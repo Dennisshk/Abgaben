@@ -17,7 +17,7 @@ public class WordFinder extends HangmanGame {
 
 
         //Lesen
-        File f = new File("words.txt");
+        File f = new File("src/worksheet6/task3/words.txt");
         FileReader fr = new FileReader(f);
         BufferedReader br = new BufferedReader(fr);
 
@@ -56,7 +56,6 @@ public class WordFinder extends HangmanGame {
 
     @Override
     protected void startGame() {
-        super.startGame();
         int length = 4;
         try {
             currentWord = chooseRandomWordFromFile(length);
@@ -70,14 +69,14 @@ public class WordFinder extends HangmanGame {
             currentWord = currentWord.toLowerCase();
             guessedLetters.clear();
             attemptsLeft = 6;
-
             timeLeft = 60;
+
+
             updateDisplay();
             inputField.setEnabled(true);
             inputField.requestFocus();
 
-            //startTimer();
-
+            super.startGame();
 
         } catch (IOException e) {
 
