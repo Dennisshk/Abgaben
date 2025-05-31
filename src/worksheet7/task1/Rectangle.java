@@ -16,7 +16,7 @@ public class Rectangle extends Shape{
 
     @Override
     public String toString() {
-        return "Width = "+width+"; Length = "+length;
+        return "Rectangle: Width = "+width+", Length = "+length;
     }
 
     public double getWidth() {
