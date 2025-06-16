@@ -2,10 +2,10 @@ package worksheet7.task5;
 
 import java.util.HashMap;
 
-public class Zoo {
-    private final HashMap<Mammal,Integer> zooInhabitants= new HashMap<>();
+public class Zoo <A extends Animal>{
+    private final HashMap<A,Integer> zooInhabitants= new HashMap<>();
 
-    public void addAnimal(Mammal m){
+    public void addAnimal(A m){
         if(!zooInhabitants.containsKey(m)){
             zooInhabitants.put(m,0);
         }
