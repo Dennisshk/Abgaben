@@ -51,7 +51,7 @@ public class PersistentShapeManager {
     public static void clearFile(String filename){
         File f = new File(filename);
         try(FileWriter fw = new FileWriter(f,false)){
-            fw.write("");
+            //fw.write("");
         }catch(IOException e){
             System.out.println(e.getMessage());
         }

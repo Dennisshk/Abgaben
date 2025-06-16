@@ -40,6 +40,10 @@ public class ShapeAnalyzer {
             if( s!=null &&   (max==null || max.getArea()<s.getArea())  ) max=s;
         }
         return max;
+        //Iterator<? extends Shape> iterator = shapes.iterator();
+        //while( iterator.hasNext()){
+        //Shape s = iterator.next();
+        //}
     }
 
     public static <T extends Shape> Map<String, List<T>> groupByType(Collection<T> shapes){
@@ -47,6 +51,7 @@ public class ShapeAnalyzer {
         for(T shape: shapes){
             String className = shape.getClass().getSimpleName();
             if(result.containsKey(className)){
+                //contains() mit equals
                 List<T> oldList= result.get(className);
                 oldList.add(shape);
             }else{

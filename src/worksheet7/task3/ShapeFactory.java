@@ -10,7 +10,8 @@ public class ShapeFactory {
     public static Shape fromString(String input) throws IllegalArgumentException{
         //formatiere String
         if(input==null) throw new IllegalArgumentException("input can't be null");
-        input = input.replace(" ","");
+        //\\s+ = alle Leerzeichen
+        input = input.replaceAll("\\s+","");
         input=input.toLowerCase();
 
         //Trenne Klassen Name und Argumente mit :
