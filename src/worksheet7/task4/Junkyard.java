@@ -5,6 +5,7 @@ import java.util.Collection;
 
 public class Junkyard {
     ArrayList<? super Vehicle> destroyed = new ArrayList<>();
+    // Alles unter Vehicle einfügbar (Vehicle oder höher ist höher als das Eingefügte)
 
     public void destroyVehicle(Collection<? extends Vehicle> vehicles){
         for(Vehicle v : vehicles){
