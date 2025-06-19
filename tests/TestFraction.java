@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.*;
-import worksheet5.task3.Fraction;
+import worksheet5.task2.Fraction;
 
 import static org.junit.jupiter.api.Assertions.*;
 

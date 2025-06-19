@@ -1,4 +1,4 @@
-package worksheet6.task3;
+package worksheet6.task2;
 
 public interface TimerLogic {
     void decreaseTime();

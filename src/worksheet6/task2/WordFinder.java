@@ -1,4 +1,4 @@
-package worksheet6.task3;
+package worksheet6.task2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

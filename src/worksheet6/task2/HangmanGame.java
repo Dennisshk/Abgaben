@@ -1,4 +1,4 @@
-package worksheet6.task3;
+package worksheet6.task2;
 //2 Interfaces implementieren verletzt SOLID
 public class HangmanGame extends GameGUI implements GameLogic,TimerLogic{
 

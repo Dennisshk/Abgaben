@@ -1,4 +1,4 @@
-package worksheet5.task3;
+package worksheet5.task2;
 
 public class Tests {
     //Tests in tests/TestFraction.java.

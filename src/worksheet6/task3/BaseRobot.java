@@ -1,4 +1,4 @@
-package worksheet6.task5;
+package worksheet6.task3;
 
 public abstract class BaseRobot implements ControllableRobot{
     private String name;

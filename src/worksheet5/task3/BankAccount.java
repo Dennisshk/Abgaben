@@ -1,4 +1,4 @@
-package worksheet5.task4;
+package worksheet5.task3;
 
 public class BankAccount {
     private int balance;

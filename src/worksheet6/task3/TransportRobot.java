@@ -1,4 +1,4 @@
-package worksheet6.task5;
+package worksheet6.task3;
 
 public class TransportRobot extends BaseRobot implements Runnable{
     public TransportRobot(String name){
