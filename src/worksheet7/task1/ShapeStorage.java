@@ -15,7 +15,7 @@ public class ShapeStorage<T extends Shape> extends ArrayList<T> {
     public void displayAllShapes(){
         for(int i=1;i<=this.size();i++){
             T shape = this.get(i-1);
-            System.out.println(i+". "+shape.toString());
+            System.out.println(i+". "+shape);
         }
     }
 
