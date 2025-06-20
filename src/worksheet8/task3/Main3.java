@@ -12,24 +12,28 @@ public class Main3 {
         movies[3] = new Movie("m4",2.4,1620);
         movies[4] = new Movie("m5",0.3,1865);
 
+        Comparator<Movie> year = (m1,m2)-> {
+            if (m1.getYear() == m2.getYear()) return 0;
+            if (m1.getYear() < m2.getYear()) {
+                return -1;
+            } else {
+                return 1;
+            }
+        };
+
+        Comparator<? super Movie> rating = (m1,m2)->{
+            if(m1.getRating()==m2.getRating()) return 0;
+            if(m1.getRating()<m2.getRating()){
+                return -1;
+            }else{
+                return 1;
+            }
+        };
+
         Stream.of(movies)
                 .filter(m->m.getRating()>=8.5)
-                .sorted(Comparator.comparing((m1, m2)->{
-                    if(m1.getYear()==m2.getYear()) return 0;
-                    if(m1.getYear()<m2.getYear()){
-                        return -1;
-                    }else{
-                        return 1;
-                    }
-                }).thenComparing((m1,m2)->{
-                    if(m1.getRating()==m2.getRating()) return 0;
-                    if(m1.getRating()<m2.getRating()){
-                        return -1;
-                    }else{
-                        return 1;
-                    }
-                }))
-                .forEach(m->System.out::println);
+                .sorted(year.thenComparing(rating))
+                .forEach(System.out::println);
 
     }
 }
