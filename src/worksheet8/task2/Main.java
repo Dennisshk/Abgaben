@@ -16,7 +16,7 @@ public class Main {
             String st =student.getName()+" studies "+ student.getMajor()+" in Year "+student.getYear();
             return st;
         };
-        //StudentFormattor s3 = student->System.out::print;
+        //StudentFormattor s3 = System.out::print;
 
         System.out.println(s1.format(s)+"   "+s1.format(t));
         System.out.println(s2.format(s)+"   "+s2.format(t));
