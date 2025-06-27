@@ -9,9 +9,9 @@ class Shape(ABC):
 
 class Circle(Shape):
     def __init__(self,radius):
-        self.radius=radius
+        self._radius=radius
 
     def getArea(self):
-        r = self.radius
+        r = self._radius
         #Bleibt eigentlich r jetzt nicht ein Objektattribut? Kann man das löschen?
         return r*r*math.pi
